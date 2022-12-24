@@ -242,15 +242,11 @@ async def start(client, message):
             f_caption=f_caption
     if f_caption is None:
         f_caption = f"{files.file_name}"
-    buttons = [[
-            InlineKeyboardButton('𖣘 𝗠𝗢𝗩𝗜𝗘𝗦 𝗚𝗥𝗢𝗨𝗣 𖣘', url='https://t.me/new_movies_group_2021')
-        ]]
     await client.send_cached_media(
         chat_id=message.from_user.id,
         file_id=file_id,
-        caption=f'<code>{title}</code>\n\n<b>✯കൂടുതൽ മൂവീസുകൾക്കായി താഴെ കാണുന്ന ഗ്രൂപ്പിൽ ജോയിൻ  ആയി ചോദിക്കാവുന്നതാണ്✍︎\n\n         ☟︎︎︎𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ☟︎︎︎\n https://t.me/+ipuYNipHQE03NmU1 \n https://t.me/+ipuYNipHQE03NmU1 \n\n    ✰Jᴏɪɴ✪Sʜᴀʀᴇ⍟Sᴜᴘᴘᴏʀᴛ★</b>',
+        caption=f_caption,
         protect_content=True if pre == 'filep' else False,
-        reply_markup=InlineKeyboardMarkup(buttons),
         )
                     
 
